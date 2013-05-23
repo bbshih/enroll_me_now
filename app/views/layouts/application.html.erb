@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav><%= link_to "Assignments", assignments_path %> - <%= link_to "Projects", projects_path %> - <%= link_to "Students", students_path %></nav>
 <%= yield %>
 
 </body>

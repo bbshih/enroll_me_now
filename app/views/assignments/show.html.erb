@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Assignment date:</b>
-  <%= @assignment.assignment_date %>
+  <b>Assignment</b>
+  <%= @assignment.assignment_date %> - <%= Student.find(@assignment.student_id).name %> - <%= Project.find(@assignment.project_id).name %>
 </p>
 
 

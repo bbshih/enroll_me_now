@@ -15,6 +15,16 @@
     <%= f.label :assignment_date %><br />
     <%= f.datetime_select :assignment_date %>
   </div>
+  <div class="field">
+    <%= f.label :student %><br />
+    <%= f.collection_select :student_id, Student.all, :id, :name %>
+    <%= link_to "New Student", new_student_path %>
+  </div>
+  <div class="field">
+    <%= f.label :project %><br />
+    <%= f.collection_select :project_id, Project.all, :id, :name %>
+    <%= link_to "New Project", new_project_path %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
