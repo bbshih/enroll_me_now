@@ -3,6 +3,8 @@
 <table>
   <tr>
     <th>Assignment date</th>
+    <th>Student</th>
+    <th>Project</th>
     <th></th>
     <th></th>
     <th></th>
@@ -10,7 +12,9 @@
 
 <% @assignments.each do |assignment| %>
   <tr>
-    <td><%= assignment.assignment_date %></td>
+    <td><%= assignment.assignment_date %>
+    <td><%= Student.find(assignment.student_id).name %>
+    <td><%= Project.find(assignment.project_id).name %></td>
     <td><%= link_to 'Show', assignment %></td>
     <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
     <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

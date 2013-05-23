@@ -1,4 +1,5 @@
 EnrollMeNow::Application.routes.draw do
+  root to: "assignments#index"
   resources :projects
 
 
