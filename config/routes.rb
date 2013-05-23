@@ -1,4 +1,10 @@
 EnrollMeNow::Application.routes.draw do
+  resources :projects
+
+
+  resources :assignments
+
+
   resources :students
 
 
